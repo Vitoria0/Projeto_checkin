@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from polls import views
+from django.conf.urls import url, include
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+     url(r'^custumer/$', views.custumerlist.as_view(), name='custumer'),
 ]
+
